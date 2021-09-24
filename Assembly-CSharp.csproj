@@ -53,10 +53,12 @@
     <UnityVersion>2020.3.15f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\OyuncuHareket.cs" />
     <Compile Include="Assets\Scripts\ArkaPlanHareketKontrol.cs" />
     <Compile Include="Assets\Scripts\TamEkran.cs" />
+    <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\KameraHareket.cs" />
-    <Compile Include="Assets\Scripts\OyuncuHareket.cs" />
+    <Compile Include="Assets\Scripts\EkranHesaplayicisi.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

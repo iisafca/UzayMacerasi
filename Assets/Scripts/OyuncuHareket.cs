@@ -39,13 +39,13 @@ public class OyuncuHareket : MonoBehaviour
         {
             velocity.x = Mathf.MoveTowards(velocity.x, hareketInput * hiz, hizlanma * Time.deltaTime);
             animator.SetBool("Walk", true);
-            scale.x = 1;
+            scale.x = 0.3f;
         }
         else if (hareketInput<0)
         {
             velocity.x = Mathf.MoveTowards(velocity.x, hareketInput * hiz, hizlanma * Time.deltaTime);
             animator.SetBool("Walk", true);
-            scale.x = -1;
+            scale.x = -0.3f;
         }
         else
         {
