@@ -32,7 +32,7 @@ public class EkranHesaplayicisi : MonoBehaviour
         {
             instance = this;
         }
-        else if (instance != true)
+        else if (instance != this)
         {
             Destroy(gameObject);
         }

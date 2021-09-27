@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5651707299573444597}
   - component: {fileID: 4373155659192396449}
   - component: {fileID: 6115768348083388033}
+  - component: {fileID: 8857499490215870579}
   m_Layer: 0
   m_Name: OlumculPlatform
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769114598165249018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07484026, y: -3.72592, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -69,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -98285337
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 2695397407002535339, guid: 00954824962c8824088e39ac3b12c25e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -109,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5863605, y: 1.4153368}
   m_EdgeRadius: 0
+--- !u!114 &8857499490215870579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769114598165249018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dcb4fd8ea5e49b43bfb351536a8ea49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

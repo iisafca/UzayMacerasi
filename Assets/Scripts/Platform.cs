@@ -8,7 +8,7 @@ public class Platform : MonoBehaviour
     PolygonCollider2D polygonCollider2D;
 
     float randomHiz;
-    bool hareket = true;
+    bool hareket;
 
     float min, max;
 

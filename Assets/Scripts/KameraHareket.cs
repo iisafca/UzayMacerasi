@@ -8,9 +8,7 @@ public class KameraHareket : MonoBehaviour
     float hizlanma;
     float maksimumHiz;
 
-    bool Hareket =true;
-
-
+    bool hareket = true;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +22,7 @@ public class KameraHareket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Hareket)
+        if (hareket)
         {
             KamerayiHareketEttir();
         }
@@ -35,7 +33,7 @@ public class KameraHareket : MonoBehaviour
     {
         transform.position += transform.up * hiz * Time.deltaTime;
         hiz += hizlanma * Time.deltaTime;
-        if (hiz > maksimumHiz)
+        if(hiz > maksimumHiz)
         {
             hiz = maksimumHiz;
         }

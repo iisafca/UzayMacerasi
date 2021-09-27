@@ -56,9 +56,11 @@
     <Compile Include="Assets\Scripts\OyuncuHareket.cs" />
     <Compile Include="Assets\Scripts\ArkaPlanHareketKontrol.cs" />
     <Compile Include="Assets\Scripts\TamEkran.cs" />
+    <Compile Include="Assets\Scripts\EkranHesaplayicisi.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\KameraHareket.cs" />
-    <Compile Include="Assets\Scripts\EkranHesaplayicisi.cs" />
+    <Compile Include="Assets\Scripts\PlatformPool.cs" />
+    <Compile Include="Assets\Scripts\OlumculPlatform.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
