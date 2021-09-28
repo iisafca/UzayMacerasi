@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 2577809527647685174, guid: ad8f438d56df88b45ac0cfe039948a34, type: 3}
   olumculPlatformPrefab: {fileID: 1769114598165249018, guid: 1197191847b39ae49bef3e8ba01c1460, type: 3}
-  playerPrefab: {fileID: 1595207621059076912, guid: d2e568a758dc547498cbac5dff625a02, type: 3}
+  playerPrefab: {fileID: 2838225712979188073, guid: d2e568a758dc547498cbac5dff625a02, type: 3}
   platformArasiMesafe: 3
 --- !u!1 &1100779223
 GameObject:

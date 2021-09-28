@@ -17,6 +17,10 @@ public class OyuncuHareket : MonoBehaviour
     float yavaslama = default;
     [SerializeField]
     float ziplamaGucu = default;
+    [SerializeField]
+    int ziplamaLimiti = 3;
+
+    int ziplamaSayisi;
 
     // Start is called before the first frame update
     void Start()
@@ -70,12 +74,23 @@ public class OyuncuHareket : MonoBehaviour
     
     void ZiplamayiBaslat()
     {
-        rb2d.AddForce(new Vector2(0, ziplamaGucu), ForceMode2D.Impulse);
-        animator.SetBool("Jump", true);
+        if (ziplamaSayisi<ziplamaLimiti)
+        {
+            rb2d.AddForce(new Vector2(0, ziplamaGucu), ForceMode2D.Impulse);
+            animator.SetBool("Jump", true);
+        }
+        
     }
 
     void ZiplamayiDurdur()
     {
         animator.SetBool("Jump", false);
+        ziplamaSayisi++;
+    }
+
+    public void ZiplamayiSifirla()
+    {
+        ziplamaSayisi = 0;
+        Debug.Log("Ziplama sýfýrlandý");
     }
 }

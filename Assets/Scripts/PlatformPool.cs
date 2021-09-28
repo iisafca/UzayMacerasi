@@ -62,7 +62,7 @@ public class PlatformPool : MonoBehaviour
         GameObject ilkPlatform = Instantiate(platformPrefab, platformPozisyon, Quaternion.identity);
         platforms.Add(ilkPlatform);
         SonrakiPlatformPozisyon();
-        ilkPlatform.GetComponent<Platform>().Hareket = false;
+        ilkPlatform.GetComponent<Platform>().Hareket = true;
 
         for (int i = 0; i < 8; i++)
         {
