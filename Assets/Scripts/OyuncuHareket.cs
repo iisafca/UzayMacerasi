@@ -21,19 +21,30 @@ public class OyuncuHareket : MonoBehaviour
     int ziplamaLimiti = 3;
 
     int ziplamaSayisi;
+    Joystick joystick;
+
+    JoystickButton joystickButton;
+
+    bool zipliyor;
 
     // Start is called before the first frame update
     void Start()
     {
+        joystickButton = FindObjectOfType<JoystickButton>();
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        joystick = FindObjectOfType<Joystick>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
+#if UNITY_EDITOR
         KlavyeKontrol();
+#else
+        JoystickKontrol();
+#endif
     }
 
     void KlavyeKontrol()
@@ -68,6 +79,45 @@ public class OyuncuHareket : MonoBehaviour
         }
         if (Input.GetKeyUp("space"))
         {
+            ZiplamayiDurdur();
+        }
+    }
+
+    void JoystickKontrol()
+    {
+        float hareketInput = joystick.Horizontal;
+        Vector2 scale = transform.localScale;
+
+        if (hareketInput > 0)
+        {
+            velocity.x = Mathf.MoveTowards(velocity.x, hareketInput * hiz, hizlanma * Time.deltaTime);
+            animator.SetBool("Walk", true);
+            scale.x = 0.3f;
+        }
+        else if (hareketInput < 0)
+        {
+            velocity.x = Mathf.MoveTowards(velocity.x, hareketInput * hiz, hizlanma * Time.deltaTime);
+            animator.SetBool("Walk", true);
+            scale.x = -0.3f;
+        }
+        else
+        {
+            velocity.x = Mathf.MoveTowards(velocity.x, 0, yavaslama * Time.deltaTime);
+            animator.SetBool("Walk", false);
+        }
+
+        transform.localScale = scale;
+        transform.Translate(velocity * Time.deltaTime);
+
+        if (joystickButton.tusaBasildi==true && zipliyor==false)
+        {
+            zipliyor = true;
+            ZiplamayiBaslat();
+        }
+
+        if (joystickButton.tusaBasildi == false && zipliyor==true)
+        {
+            zipliyor = false;
             ZiplamayiDurdur();
         }
     }
