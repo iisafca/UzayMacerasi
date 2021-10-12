@@ -48,6 +48,15 @@ public class PlatformPool : MonoBehaviour
             platforms[i + 5] = platforms[i];
             platforms[i] = temp;
             platforms[i + 5].transform.position = platformPozisyon;
+            if (platforms[i + 5].gameObject.tag=="Platform")
+            {
+                platforms[i + 5].GetComponent<Altin>().AltinKapat();
+                float rastgeleAltin = Random.Range(0.0f, 1.0f);
+                if (rastgeleAltin>0.5f)
+                {
+                    platforms[i + 5].GetComponent<Altin>().AltinAc();
+                }
+            }
             SonrakiPlatformPozisyon();
         }
     }
@@ -69,6 +78,11 @@ public class PlatformPool : MonoBehaviour
             GameObject platform = Instantiate(platformPrefab, platformPozisyon, Quaternion.identity);
             platforms.Add(platform);
             platform.GetComponent<Platform>().Hareket = true;
+            //Sahnede rastgele 2 altýn oluþmasýný saðladýk
+            if (i%2==0)
+            {
+                platform.GetComponent<Altin>().AltinAc();
+            }
             SonrakiPlatformPozisyon();
         }
 

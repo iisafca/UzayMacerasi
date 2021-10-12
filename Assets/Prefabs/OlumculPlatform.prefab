@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8857499490215870579}
   m_Layer: 0
   m_Name: OlumculPlatform
-  m_TagString: Untagged
+  m_TagString: OlumculPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
